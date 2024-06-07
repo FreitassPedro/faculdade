@@ -10,18 +10,21 @@ int main() {
     scanf("%d", &numero);
 
     
-    int numeroRepetido = 0;
-    while (numero > 0) {
-        int digitoAtual = numero % 10;
-        int auxNumero = numero / 10;
-        while (auxNumero > 0) {
-            if (digitoAtual == auxNumero % 10) numeroRepetido++;
-            auxNumero /= 10;
+    while (numero > 0) 
+    {
+        int current = numero % 10;
+        int aux = numero / 10;
+        while (aux > 0) 
+        {
+            if (current == aux % 10) {
+                printf("contem numero repetido");
+            }
+            aux /= 10;
         }
         numero /= 10;
+        
     }
-
-    if (numeroRepetido > 0) printf("Possui numero repetido");
+    
 }
 
 
