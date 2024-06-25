@@ -21,7 +21,6 @@
     int highTemp = 0;
     int lessTemp = 0;
     int mediaTemp = 0;
-    printf("")
     for (int i = 0; i < 30; i++)
     {
         int currentTemp = temperaturas[i];

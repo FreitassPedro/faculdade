@@ -15,14 +15,13 @@ int main() {
     int size = 10;
     int firstVector[size];
     int secondVector[size];
+    int valores_first[] = {3, 5, 32, 12, 92, 18, 21, 55, 21, 22};
+    int valores_second[] = {23, 11, 71, 909, 8, 0, 25, 85, 33, 21};
 
-    srand(time(NULL));
-
-    //gerar numeros aleatorios, só pra nao ficar digitando
+    // Inetar valores no array
     for (int i = 0; i < size; i++) {
-        int num = rand() * (i + 1) % 50;
-        firstVector[i] = num * 4;
-        secondVector[i] = num * 2.2;
+    firstVector[i] = valores_first[i];
+    secondVector[i] = valores_second[i];
     }
 
     // Junta vetores
@@ -30,13 +29,13 @@ int main() {
     int thirdVector[size];
     int count = 0;
     for(int i = 0; i<size; i++) {
-        if (count < 10) { 
+        if (i % 2 > 0) { 
             thirdVector[i] = firstVector[count];
+            count++;
         }
         else { 
             thirdVector[i] = secondVector[count]; 
         }
-        if(i % 2 == 0 && i != 0) count++;
     }
 
 
