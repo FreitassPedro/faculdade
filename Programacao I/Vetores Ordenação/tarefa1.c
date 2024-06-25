@@ -31,7 +31,7 @@ int main () {
 
     for (int i = 0; i < qtdNumeros; i++) 
     {
-        printf("%d", arrayN[i]);
+        printf("%d, ", arrayN[i]);
     }
 
     return 0;
